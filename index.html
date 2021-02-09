@@ -9,7 +9,10 @@
 	</head>
 	<body>
 		<!-- NAVBAR -->
-		<nav id="main-nav" class="navbar navbar-light navbar-expand-md py-2 fs-5">
+		<nav
+			id="main-nav"
+			class="navbar navbar-light fixed-top navbar-expand-md py-2 fs-5"
+		>
 			<div class="container">
 				<a href="index.html#hero" class="navbar-brand avenir">
 					<img src="img/SSEESAC-logo.png" alt="logo SSEESAC" width="40" />
@@ -65,28 +68,59 @@
 
 		<!-- HEADER -->
 
-		<section id="header" class="py-5 avenir">
-			<div class="container">
-				<div class="row header-gap"></div>
-				<div class="header-container">
+		<section id="header" class="pt-5 avenir">
+			<div class="container d-flex justify-content-end align-items-end">
+				<div class="">
 					<div class="header-text">
 						<h1 class="header-title avenir">
-							<span>Securité</span><br />
-							<span>Santé</span> <br />
-							<span>et</span> <br />
+							<span>Securité</span>
+							<span>Santé</span>
+							<span>et</span>
 							<span>Environnment</span>
 						</h1>
 						<p class="header-lead">Consultora de Gestión</p>
 					</div>
 				</div>
-				<div class="row py-4">
-					<div class="col mx-auto text-center">
+				<!-- 	<div class="row">
+					<div class="col-12 mx-auto text-center">
 						<button class="header-btn avenir mx-auto">
 							contáctanos
-
 							<span class="pulse1"></span>
 							<span class="pulse2"></span>
 						</button>
+					</div>
+				</div> -->
+			</div>
+		</section>
+
+		<!-- NOSOTROS -->
+
+		<section id="nosotros" class="py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 py-5 position-relative">
+						<div class="nosotros-img-container">
+							<img
+								src="https://source.unsplash.com/random/500x1000"
+								alt=""
+								class="nosotros-img"
+							/>
+						</div>
+						<div class="nosotros-box">
+							<h2 class="section-header m-sm-5">
+								<span class="corners-border">Nosotros</span>
+							</h2>
+							<p class="fs-6 px-sm-5 p-2">
+								SSEESAC es una firma que brinda asesoría con una innovadora
+								propuesta de servicios personalizados y diseñados a la necesidad
+								de cada cliente.
+							</p>
+							<p class="fs-6 px-sm-5 p-2">
+								Queremos ser los primeros impulsadores de la cultura de
+								seguridad en el país, para que cuando las personas piensen en
+								seguridad y mediambiente piensen en SSEESAC.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -236,54 +270,20 @@
 			</div>
 		</section>
 
-		<!-- NOSOTROS -->
-
-		<section id="nosotros" class="py-5">
-			<div class="container">
-				<div class="row">
-					<div class="col-6 py-5 position-relative">
-						<div class="nosotros-img-container">
-							<img src="img/nosotros2.jpg" alt="" class="nosotros-img" />
-						</div>
-						<div class="nosotros-box">
-							<h2 class="section-header nosotros-header p-sm-5 p-2">
-								Nosotros
-							</h2>
-							<p class="fs-6 px-sm-5 p-2">
-								SSEESAC es una firma que brinda asesoría con una innovadora
-								propuesta de servicios personalizados y diseñados a la necesidad
-								de cada cliente.
-							</p>
-							<p class="fs-6 px-sm-5 p-2">
-								Queremos ser los primeros impulsadores de la cultura de
-								seguridad en el país, para que cuando las personas piensen en
-								<span class="fw-bold">seguridad</span> y<span class="fw-bold">
-									mediombiente
-								</span>
-								piensen en SSEESAC.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<!-- PRACTICAS -->
 
 		<section id="practicas" class="text-white py-4">
 			<div class="container py-5">
-				<h2 class="section-header pb-5 mb-5 text-secondary">
-					Areas de Practica
-				</h2>
+				<h2 class="section-header mb-5">Areas de Practica</h2>
 				<div
-					class="row d-flex gy-5 flex-column flex-md-row align-items-center justify-content-around"
+					class="mt-4 row d-flex gy-5 flex-column flex-md-row align-items-center justify-content-around"
 				>
 					<div class="practica-container py-3">
 						<h3 class="practica-header"><span>Formacion</span></h3>
 						<div class="practica-number">01</div>
 						<img
 							class="img-fluid practica-img"
-							src="img/Formacion.jpg"
+							src="/img/Formacion.jpg"
 							alt=""
 						/>
 					</div>
@@ -294,7 +294,7 @@
 						<div class="practica-number">02</div>
 						<img
 							class="img-fluid practica-img"
-							src="img/asesoría y consultoría.jpg"
+							src="/img/asesoría y consultoría.jpg"
 							alt=""
 						/>
 					</div>
@@ -303,7 +303,7 @@
 						<div class="practica-number">03</div>
 						<img
 							class="img-fluid practica-img"
-							src="img/auditoria.jpg"
+							src="/img/auditoria.jpg"
 							alt=""
 						/>
 					</div>
@@ -315,13 +315,11 @@
 
 		<section id="team" class="py-2">
 			<div class="container">
-				<h2 class="section-header text-secondary team-header text-center py-5">
-					Nuestro Equipo
-				</h2>
+				<h2 class="section-header my-5">Cofundadores</h2>
 				<div class="row d-flex justify-content-around text-center">
 					<div class="col-lg-4 col-md-6">
 						<div class="team-container">
-							<img src="img/team-1.jpg" alt="" class="img-fluid team-img" />
+							<img src="/img/team-1.jpg" alt="" class="img-fluid team-img" />
 							<div class="card-team">
 								<h3 class="card-title">Santiago Toledo</h3>
 								<p class="card-subtitle lead">Lic. Informatica</p>
@@ -337,10 +335,10 @@
 					</div>
 					<div class="col-lg-4 col-md-6">
 						<div class="team-container">
-							<img src="img/team-2.jpg" alt="" class="img-fluid team-img" />
+							<img src="/img/team-2.jpg" alt="" class="img-fluid team-img" />
 							<div class="card-team">
-								<h3 class="card-title avenir">Santiago</h3>
-								<p class="card-subtitle lead">programador</p>
+								<h3 class="card-title avenir">Juan Perez</h3>
+								<p class="card-subtitle lead">Analista</p>
 								<p class="py-2">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 									Quibusdam, dolorum?
@@ -361,14 +359,7 @@
 			<div class="container">
 				<h2 class="section-header">Contactanos</h2>
 				<div class="row">
-					<div class="col-md-4 col-sm-3">
-						<ul>
-							<li>dir</li>
-							<li>tel</li>
-							<li>mail</li>
-						</ul>
-					</div>
-					<div class="col-md-8 col-lg-6 ms-auto">
+					<div class="col-md-8 col-lg-6 mx-auto">
 						<form action="" class="form">
 							<div class="input-group">
 								<input
@@ -418,7 +409,7 @@
 			<div class="wp-dialog">
 				<div class="wp-header">
 					<div class="wp-logo-container">
-						<img src="img/SSEESAC-logo.png" class="wp-logo" alt="" />
+						<img src="/img/SSEESAC-logo.png" class="wp-logo" alt="" />
 					</div>
 					<h4 class="wp-title avenir">SSESSAC</h4>
 				</div>
@@ -427,7 +418,7 @@
 				<div class="wp-write">
 					<input type="text" class="wp-input" />
 					<button class="wp-send">
-						<img src="img/wp-send.svg" alt="" class="img-fluid" />
+						<img src="/img/wp-send.svg" alt="" class="img-fluid" />
 					</button>
 				</div>
 			</div>
@@ -438,7 +429,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
 
 		<script>
-			//header
+			/* 	//header
 
 			gsap.from('.header-text', {
 				x: 1000,
@@ -453,7 +444,7 @@
 				duration: 1,
 				ease: 'sine.out',
 			})
-
+ */
 			// HEADER - BTN
 			gsap.from('.header-btn', {
 				opacity: 0,
