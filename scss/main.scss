@@ -1,0 +1,523 @@
+$secondary: #fd8039;
+$primary: #104b7a;
+$info: #6e6864;
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+$clr-lgrey: #f7f3f0;
+$clr-dgrey: #e1dad5;
+$clr-ddgrey: #bab2b5;
+
+// FONTS
+
+@font-face {
+	font-family: 'Avenir';
+	src: url('fonts/Avenir-Heavy.woff2') format('woff2'),
+		url('fonts/Avenir-Heavy.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Avenir';
+	src: url('fonts/Avenir-Medium.woff2') format('woff2'),
+		url('fonts/Avenir-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Avenir';
+	src: url('fonts/Avenir-Light.woff2') format('woff2'),
+		url('fonts/Avenir-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+// GENERAL
+
+html,
+body {
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
+}
+
+.avenir {
+	font-family: 'Avenir';
+}
+
+.section-header {
+	font-size: 3.25rem;
+	font-weight: 900;
+	font-family: 'Avenir';
+}
+
+//NAVBAR
+
+#main-nav {
+	background: #f7f3f0;
+}
+
+//HEADER
+
+#header {
+	position: relative;
+	height: 90vh;
+	max-height: 100vw;
+	background: $clr-dgrey;
+}
+.header-gap {
+	height: 70vh;
+	background: transparent;
+}
+.header-container {
+	position: absolute;
+	background-image: url('../img/Portada-2.png');
+	background-position: 50% 50%;
+	background-size: cover;
+	left: 25%;
+	top: 10%;
+	width: 50%;
+	height: 70%;
+}
+
+.header-text {
+	position: absolute;
+	left: -1.18em;
+	top: 5vh;
+	color: white;
+	font-family: 'Avenir';
+	font-size: clamp(2.5rem, 8vw, 10vh);
+	z-index: 9999;
+	letter-spacing: 0.2rem;
+}
+
+.header-title {
+	font-size: clamp(2.5rem, 8vw, 10vh);
+	font-weight: 900;
+}
+
+.header-title span:hover {
+	transition: ease-in 0.2s;
+	color: $secondary;
+}
+.header-lead {
+	font-size: clamp(1.5rem, 5vw, 5vh);
+	font-weight: 200;
+}
+
+.header-btn {
+	position: relative;
+	background: $secondary;
+	color: white;
+	font-size: clamp(0.9rem, 1.5vw, 4vh);
+	padding: 1.2rem 2.5rem;
+	line-height: 0;
+	font-weight: 800;
+	width: auto;
+	height: clamp(1.5rem, 5vw, 6vh);
+	border-radius: 5px;
+	z-index: 9999;
+	border: none;
+}
+
+.header-btn:hover {
+	transition: ease-in 0.2s;
+}
+
+.header-btn .pulse1,
+.header-btn .pulse2 {
+	position: absolute;
+	background: $secondary;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 5px;
+	backface-visibility: hidden;
+	z-index: -1;
+}
+
+// PERKS
+#perks {
+	background: linear-gradient(0deg, $clr-lgrey 50%, $clr-dgrey 50%);
+}
+
+.perks-box {
+	background: white;
+	padding: 1em 2em;
+	margin: 0.1em 0.05em;
+}
+
+.perks-box:hover {
+	.perks-svg {
+		fill: #ff6d19;
+		transform: scale(1.2);
+		transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.2s;
+	}
+}
+
+.perks-svg {
+	fill: #fd8039;
+	transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.2s;
+}
+
+// NOSOTROS
+
+#nosotros {
+	background: $clr-lgrey;
+	position: relative;
+}
+
+.nosotros-img-container {
+	position: relative;
+	width: 80%;
+	height: 600px;
+	overflow: hidden;
+}
+
+.nosotros-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.nosotros-box {
+	position: absolute;
+	left: 70%;
+	top: 15%;
+	height: 70%;
+	width: 120%;
+	background: white;
+}
+
+.nosotros-header {
+	color: $secondary;
+}
+.nosotros
+
+// PRACTICAS
+
+#practicas {
+	background: #e6e2dd;
+}
+
+.practica-container {
+	position: relative;
+	flex-basis: 30%;
+	min-width: 300px;
+}
+
+.practica-img {
+	z-index: 1;
+}
+
+.practica-header {
+	position: absolute;
+	bottom: 2rem;
+	left: 3rem;
+	font-size: 28px;
+	z-index: 3;
+	span {
+		background: $secondary;
+		padding: 0 5px;
+	}
+}
+
+.practica-number {
+	position: absolute;
+	color: $secondary;
+	top: -90px;
+	left: 50px;
+	font-size: 6.5rem;
+	font-weight: 700;
+	z-index: 2;
+}
+
+@media (max-width: 739px) {
+	.section-header {
+		font-size: 3rem;
+	}
+}
+
+// TEAM
+
+#team {
+	background: $clr-lgrey;
+}
+
+.team-container {
+	position: relative;
+	padding-bottom: 200px;
+}
+
+.card-team {
+	position: absolute;
+	bottom: 80px;
+	left: 4%;
+	width: 92%;
+	background: white;
+	padding: 20px 0;
+}
+
+.card .card-title {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-size: 24px;
+}
+.card-subtitle {
+	color: $secondary;
+	padding-bottom: 10px;
+}
+
+[class*='flaticon'] {
+	color: $secondary;
+}
+
+.team-img {
+	filter: grayscale(100%);
+	box-shadow: 0 0 10px #6e6864;
+}
+
+// CONTACT
+#contact {
+	position: relative;
+	width: 100%;
+	height: 600px;
+}
+
+#contact::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background: url(../img/mapa-peru.png);
+	background-position: cover;
+	filter: grayscale(100%);
+
+	opacity: 0.35;
+}
+
+.form {
+	width: 100%;
+}
+
+.input-group {
+	width: 100%;
+	position: relative;
+	height: 50px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	border-radius: 5px 5px 0 0;
+	z-index: 100;
+	box-shadow: -2px 2px 10px rgba(123, 122, 122, 0.562);
+}
+.form-input {
+	width: 100%;
+	height: 100%;
+	padding-top: 20px;
+	border: none;
+	outline: none;
+}
+
+.input-label {
+	position: absolute;
+	bottom: 0px;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 2px solid $clr-ddgrey;
+	background: transparent;
+}
+.input-label::after {
+	content: '';
+	position: absolute;
+	left: -100%;
+	bottom: -1px;
+	width: 100%;
+	height: 100%;
+	border-bottom: 2px solid $secondary;
+	transition: 0.3s ease;
+}
+
+.input-label-content {
+	position: absolute;
+	top: 1em;
+	left: 10px;
+	transition: 0.3s ease;
+}
+
+.form-input:focus + .input-label::after,
+.form-input:valid + .input-label::after {
+	left: 0px;
+}
+.form-input:focus + .input-label .input-label-content,
+.form-input:valid + .input-label .input-label-content {
+	left: 0;
+	top: 0;
+	font-size: 14px;
+	color: $secondary;
+}
+
+.form-message {
+	height: 150px;
+}
+
+// WHATSAPP
+
+.wp {
+	position: fixed;
+	right: 40px;
+	bottom: 40px;
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	background: #009688;
+	//background: #25d366;
+	box-shadow: 0 0 10px rgb(63, 62, 62);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.wp-svg {
+	width: 35px;
+}
+
+.wp-dialog {
+	position: absolute;
+	height: 200px;
+	width: 300px;
+	right: 0px;
+	top: 0;
+
+	background: $clr-lgrey;
+	border-radius: 5px;
+	box-shadow: 1px 1px 10px #3f3e3e;
+
+	display: none;
+	opacity: 0;
+	cursor: default;
+}
+
+.wp-dialog::before {
+	content: '';
+	position: absolute;
+	right: 20px;
+	bottom: -8px;
+	width: 0;
+	height: 0;
+
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid #ededed;
+	filter: drop-shadow(0px 6px 3px #63636378);
+}
+
+.wp-header {
+	padding: 0.7em 0.7em;
+	// background: #075e54;
+	background: #009688;
+	//	background: #25d366;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	border-radius: 5px 5px 0 0;
+}
+
+.wp-logo-container {
+	width: 38px;
+	height: 38px;
+	background: white;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wp-logo {
+	width: 30px;
+}
+.wp-title {
+	font-size: 18px;
+	margin: 0 0 0 10px;
+}
+
+.message {
+	color: #000;
+	clear: both;
+	line-height: 18px;
+	font-size: 15px;
+	padding: 8px;
+	position: relative;
+	margin: 15px 15px;
+	max-width: 85%;
+	word-wrap: break-word;
+	box-shadow: 0 0 5px #3f3e3e88;
+}
+
+.message:after {
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+}
+
+.message.received {
+	background: #fff;
+	border-radius: 0px 5px 5px 5px;
+	float: left;
+}
+
+.message.received:after {
+	border-width: 0px 10px 10px 0;
+	border-color: transparent #fff transparent transparent;
+	top: 0;
+	left: -10px;
+	filter: drop-shadow(-3px 0 3px #8a8a8ac1);
+}
+
+.wp-write {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 0px 0;
+	background: #ededed;
+	border-radius: 5px;
+}
+
+.wp-input {
+	margin: 10px 5px 10px 10px;
+	padding: 5px 10px;
+	width: 80%;
+	border: none;
+	background: white;
+	border-radius: 50px;
+	outline: none;
+	font-size: 15px;
+}
+
+.wp-send {
+	border: NONE;
+	background: #009688;
+	border-radius: 100%;
+	width: 25px;
+	height: 25px;
+	padding: 0 0;
+	img {
+		width: 15px;
+		margin-right: 3px;
+		margin-bottom: 2px;
+	}
+}
