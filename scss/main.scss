@@ -43,6 +43,9 @@ html,
 body {
 	font-family: 'Open Sans', sans-serif;
 	overflow-x: hidden;
+	line-height: 1.6;
+	padding: 0;
+	margin: 0;
 }
 
 .avenir {
@@ -50,53 +53,85 @@ body {
 }
 
 .section-header {
+	position: relative;
 	font-size: 3.25rem;
 	font-weight: 900;
 	font-family: 'Avenir';
+	color: $secondary;
+	z-index: 1;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 2em;
+		height: 1px;
+		left: 0;
+		bottom: -0.2em;
+		background: $secondary;
+	}
+}
+
+.shadow {
+	box-shadow: 0px 1px 10px rgba(97, 95, 95, 0.736);
 }
 
 //NAVBAR
 
 #main-nav {
-	background: #f7f3f0;
+	background: white;
+
+	box-shadow: 0px 0px 10px rgba(97, 95, 95, 0.541);
+}
+.nav-item {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 5%;
+		bottom: 0.3em;
+		width: 0%;
+		height: 2px;
+		background: $secondary;
+		opacity: 0;
+		transition: all ease 0.5s;
+	}
+	&:hover {
+		&::after {
+			width: 90%;
+			opacity: 1;
+		}
+	}
 }
 
 //HEADER
 
 #header {
 	position: relative;
+	background: url(../img/Portada-2.png);
+	background-position: center center;
+	background-size: cover;
 	height: 90vh;
 	max-height: 100vw;
-	background: $clr-dgrey;
-}
-.header-gap {
-	height: 70vh;
-	background: transparent;
-}
-.header-container {
-	position: absolute;
-	background-image: url('../img/Portada-2.png');
-	background-position: 50% 50%;
-	background-size: cover;
-	left: 25%;
-	top: 10%;
-	width: 50%;
-	height: 70%;
+	.container {
+		height: 100%;
+	}
 }
 
 .header-text {
-	position: absolute;
-	left: -1.18em;
-	top: 5vh;
 	color: white;
 	font-family: 'Avenir';
 	font-size: clamp(2.5rem, 8vw, 10vh);
-	z-index: 9999;
+	padding: 2vw 0vw;
 	letter-spacing: 0.2rem;
+	span {
+		line-height: 1;
+		display: block;
+	}
 }
 
 .header-title {
-	font-size: clamp(2.5rem, 8vw, 10vh);
+	font-size: clamp(2.5rem, 6vw, 8vh);
 	font-weight: 900;
 }
 
@@ -109,47 +144,17 @@ body {
 	font-weight: 200;
 }
 
-.header-btn {
-	position: relative;
-	background: $secondary;
-	color: white;
-	font-size: clamp(0.9rem, 1.5vw, 4vh);
-	padding: 1.2rem 2.5rem;
-	line-height: 0;
-	font-weight: 800;
-	width: auto;
-	height: clamp(1.5rem, 5vw, 6vh);
-	border-radius: 5px;
-	z-index: 9999;
-	border: none;
-}
-
-.header-btn:hover {
-	transition: ease-in 0.2s;
-}
-
-.header-btn .pulse1,
-.header-btn .pulse2 {
-	position: absolute;
-	background: $secondary;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	border-radius: 5px;
-	backface-visibility: hidden;
-	z-index: -1;
-}
-
 // PERKS
 #perks {
-	background: linear-gradient(0deg, $clr-lgrey 50%, $clr-dgrey 50%);
+	//	background: linear-gradient(0deg, white 50%, $clr-lgrey 50%);
+	background: $clr-lgrey;
 }
 
 .perks-box {
 	background: white;
 	padding: 1em 2em;
-	margin: 0.1em 0.05em;
+	margin: 0.1em auto;
+	box-shadow: 0px 1px 10px rgba(97, 95, 95, 0.451);
 }
 
 .perks-box:hover {
@@ -168,7 +173,6 @@ body {
 // NOSOTROS
 
 #nosotros {
-	background: $clr-lgrey;
 	position: relative;
 }
 
@@ -177,6 +181,9 @@ body {
 	width: 80%;
 	height: 600px;
 	overflow: hidden;
+	@media (max-width: 739px) {
+		height: 500px;
+	}
 }
 
 .nosotros-img {
@@ -184,6 +191,9 @@ body {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
+	@media (max-width: 739px) {
+		display: none;
+	}
 }
 .nosotros-box {
 	position: absolute;
@@ -191,12 +201,15 @@ body {
 	top: 15%;
 	height: 70%;
 	width: 120%;
-	background: white;
+	background: $clr-lgrey;
+	@media (max-width: 739px) {
+		left: 5%;
+		width: 190%;
+		height: 100%;
+		top: 0%;
+	}
 }
 
-.nosotros-header {
-	color: $secondary;
-}
 .nosotros
 
 // PRACTICAS
@@ -207,19 +220,22 @@ body {
 
 .practica-container {
 	position: relative;
+	color: black;
 	flex-basis: 30%;
 	min-width: 300px;
 }
 
 .practica-img {
 	z-index: 1;
+	box-shadow: 0px 1px 10px rgba(97, 95, 95, 0.451);
 }
 
 .practica-header {
 	position: absolute;
 	bottom: 2rem;
-	left: 3rem;
+	left: 2rem;
 	font-size: 28px;
+	font-style: none;
 	z-index: 3;
 	span {
 		background: $secondary;
@@ -230,11 +246,12 @@ body {
 .practica-number {
 	position: absolute;
 	color: $secondary;
-	top: -90px;
+	top: -70px;
 	left: 50px;
 	font-size: 6.5rem;
 	font-weight: 700;
 	z-index: 2;
+	text-shadow: 0 0px 6px rgba(97, 95, 95, 0.451);
 }
 
 @media (max-width: 739px) {
@@ -286,10 +303,11 @@ body {
 #contact {
 	position: relative;
 	width: 100%;
-	height: 600px;
+	max-height: auto;
+	color: white;
 }
 
-#contact::after {
+#contact::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -297,11 +315,13 @@ body {
 	width: 100%;
 	height: 100%;
 
-	background: url(../img/mapa-peru.png);
+	background-image: url(../img/mapa-peru.png);
+	background-color: rgba(0, 0, 0, 0.791);
+	background-blend-mode: multiply;
 	background-position: cover;
 	filter: grayscale(100%);
 
-	opacity: 0.35;
+	pointer-events: none;
 }
 
 .form {
@@ -314,16 +334,17 @@ body {
 	height: 50px;
 	overflow: hidden;
 	margin-bottom: 20px;
-	border-radius: 5px 5px 0 0;
+	font-weight: 800;
 	z-index: 100;
-	box-shadow: -2px 2px 10px rgba(123, 122, 122, 0.562);
 }
+
 .form-input {
 	width: 100%;
 	height: 100%;
 	padding-top: 20px;
 	border: none;
 	outline: none;
+	background: none;
 }
 
 .input-label {
@@ -333,17 +354,18 @@ body {
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
-	border-bottom: 2px solid $clr-ddgrey;
+	border-bottom: 2px solid $secondary;
 	background: transparent;
 }
 .input-label::after {
 	content: '';
 	position: absolute;
 	left: -100%;
-	bottom: -1px;
+	bottom: -2px;
 	width: 100%;
 	height: 100%;
-	border-bottom: 2px solid $secondary;
+	border-bottom: 2px solid rgb(207, 207, 207);
+
 	transition: 0.3s ease;
 }
 
@@ -368,6 +390,71 @@ body {
 
 .form-message {
 	height: 150px;
+}
+
+.contact-info {
+	list-style: none;
+}
+
+.contact-item {
+	position: relative;
+	padding: 0.5rem 1em;
+	display: flex;
+	align-items: center;
+
+	[class^='flaticon-']:after {
+		font-size: 2rem;
+		margin-right: 1rem;
+	}
+}
+
+.contact-btn {
+	position: relative;
+	background: transparent;
+	border: 2px solid $secondary;
+	color: white;
+	font-size: clamp(0.9rem, 1.5vw, 4vh);
+	padding: 1.2rem 2.5rem;
+	line-height: 0;
+	font-weight: 800;
+	width: auto;
+	height: clamp(1.5rem, 5vw, 6vh);
+	border-radius: 5px;
+	z-index: 10;
+	transition: ease-in 0.2s;
+}
+
+.contact-btn:hover {
+	background: $secondary;
+}
+
+.contact-btn .pulse1,
+.contact-btn .pulse2 {
+	position: absolute;
+	background: $secondary;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 5px;
+	backface-visibility: hidden;
+	z-index: -1;
+}
+
+// FOOTER
+#footer {
+	background: #3f3e3e;
+	a {
+		text-decoration: none;
+		color: white;
+	}
+}
+.footer-ul {
+	list-style: none;
+	margin: 0;
+}
+.footer-brand {
+	font-weight: 900;
 }
 
 // WHATSAPP
@@ -520,4 +607,37 @@ body {
 		margin-right: 3px;
 		margin-bottom: 2px;
 	}
+}
+
+//                SERVICIOS
+//////////////////////////////////////////
+#practicas-full .practica-container {
+	cursor: pointer;
+	transition: 0.2s ease;
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+///////////////////////////////////////////
+//             LISTA SERVICIOS
+//////////////////////////////////////////
+
+.rolldown-list ul {
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.rolldown-list li {
+	padding: 1em;
+	padding-left: 3em;
+	margin-bottom: 0.125em;
+	display: block;
+	visibility: hidden;
+}
+
+.rolldown-list li:nth-child(2n + 1) {
+	background-color: #f3f3fa;
 }
