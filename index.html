@@ -74,6 +74,10 @@
 		<!-- HEADER -->
 
 		<section id="header" class="pt-5 avenir">
+			<video playsinline autoplay muted loop poster="" id="bgvid">
+				<!-- <source src="polina.webm" type="video/webm"> -->
+				<source src="video/peru3.m4v" type="video/mp4" />
+			</video>
 			<div class="container d-flex justify-content-end align-items-end">
 				<div class="">
 					<div class="header-text">
@@ -94,20 +98,21 @@
 		<section id="nosotros" class="py-5">
 			<div class="container">
 				<div class="row">
+					<div class="col-lg-1"></div>
 					<div class="col-6 py-5 position-relative">
 						<div class="nosotros-img-container shadow">
 							<img src="img/nosotros2.jpg" alt="" class="nosotros-img" />
 						</div>
 						<div class="nosotros-box shadow">
-							<h2 class="section-header m-5">
+							<h2 class="section-header">
 								<span class="corners-border">Nosotros</span>
 							</h2>
-							<p class="fs-6 px-5 p-2">
+							<p class="">
 								SSEESAC es una firma que brinda asesoría con una innovadora
 								propuesta de servicios personalizados y diseñados a la necesidad
 								de cada cliente.
 							</p>
-							<p class="fs-6 px-5 p-2">
+							<p class="">
 								Queremos ser los primeros impulsadores de la cultura de
 								seguridad en el país, para que cuando las personas piensen en
 								seguridad y mediambiente piensen en SSEESAC.
@@ -124,12 +129,12 @@
 			<div class="container">
 				<h2 class="section-header mb-5 w-50 mx-auto">¿Por que elegirnos?</h2>
 				<div class="row justify-content-md-center">
-					<div class="col-md-3 text-center perks-box">
+					<div class="col-md-3 text-center perks-box shadow">
 						<svg
 							id="proactividad"
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 481.96 481.94"
-							width="75"
+							width="70"
 							class="py-3 perks-svg"
 						>
 							<g id="foco">
@@ -182,12 +187,12 @@
 								/>
 							</g>
 						</svg>
-						<h3 class="fs-4 py-2">Somos Proactivos</h3>
+						<h3 class="fs-5 py-2">Somos Proactivos</h3>
 						<p>Ponemos toda nuestra energía en cada etapa del proyecto</p>
 					</div>
-					<div class="col-md-3 text-center perks-box">
+					<div class="col-md-3 text-center perks-box shadow">
 						<svg
-							width="80"
+							width="75"
 							id="individual"
 							class="py-3 perks-svg"
 							viewBox="0 0 480 480.23973"
@@ -226,18 +231,18 @@
 							/>
 						</svg>
 
-						<h3 class="fs-4 py-2">Enfoque Individual</h3>
+						<h3 class="fs-5 py-2">Enfoque Individual</h3>
 						<p>
 							No existen dos proyectos iguales, nuestro enfoque es único y
 							personalizado.
 						</p>
 					</div>
-					<div class="col-md-3 text-center perks-box">
+					<div class="col-md-3 text-center perks-box shadow">
 						<svg
 							class="py-3 perks-svg"
 							id="objetivo"
 							viewBox="0 0 512.001 512.001"
-							width="80"
+							width="75"
 							xmlns="http://www.w3.org/2000/svg"
 						>
 							<g>
@@ -256,7 +261,7 @@
 								/>
 							</g>
 						</svg>
-						<h3 class="fs-4 py-2">Orientados a los resultados</h3>
+						<h3 class="fs-5 py-2">Orientados a los resultados</h3>
 						<p>Nuestro foco esta puesto en alcanzar tus objetivos</p>
 					</div>
 				</div>
@@ -271,8 +276,8 @@
 				<div
 					class="avenir mt-4 row d-flex gy-5 flex-column flex-md-row align-items-center justify-content-around"
 				>
-					<a href="servicios.html#Formacion" class="practica-container py-3">
-						<h3 class="practica-header"><span>Formacion</span></h3>
+					<a href="servicios.html#Formacion" class="practica-container py-1">
+						<h3 class="practica-header">Formacion</h3>
 						<div class="practica-number">01</div>
 						<img
 							class="img-fluid practica-img"
@@ -280,10 +285,8 @@
 							alt=""
 						/>
 					</a>
-					<a href="servicios.html#Asesorias" class="practica-container py-3">
-						<h3 class="practica-header">
-							<span>Asesorias y </span><span> consultorias</span>
-						</h3>
+					<a href="servicios.html#Asesorias" class="practica-container py-1">
+						<h3 class="practica-header">Asesorias y consultorias</h3>
 						<div class="practica-number">02</div>
 						<img
 							class="img-fluid practica-img"
@@ -291,8 +294,8 @@
 							alt=""
 						/>
 					</a>
-					<a href="servicios.html#Auditorias" class="practica-container py-3">
-						<h3 class="practica-header"><span>Auditorias</span></h3>
+					<a href="servicios.html#Auditorias" class="practica-container py-1">
+						<div class="practica-header">Auditorias</div>
 						<div class="practica-number">03</div>
 						<img
 							class="img-fluid practica-img"
@@ -310,12 +313,12 @@
 			<div class="container">
 				<h2 class="section-header my-5">Cofundadores</h2>
 				<div class="row d-flex justify-content-around text-center pt-2">
-					<div class="col-lg-4 col-md-6">
+					<div class="col-lg-4 col-5">
 						<div class="team-container">
 							<img src="img/team-1.jpg" alt="" class="img-fluid team-img" />
 							<div class="card-team">
 								<h3 class="card-title">Santiago Toledo</h3>
-								<p class="card-subtitle lead">Lic. Informatica</p>
+								<p class="card-subtitle">Lic. Informatica</p>
 								<p class="py-2">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 									Quibusdam, dolorum?
@@ -330,8 +333,8 @@
 						<div class="team-container">
 							<img src="img/team-2.jpg" alt="" class="img-fluid team-img" />
 							<div class="card-team">
-								<h3 class="card-title avenir">Juan Perez</h3>
-								<p class="card-subtitle lead">Analista</p>
+								<h3 class="card-title">Juan Perez</h3>
+								<p class="card-subtitle">Analista</p>
 								<p class="py-2">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 									Quibusdam, dolorum?

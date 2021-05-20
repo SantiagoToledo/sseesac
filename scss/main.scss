@@ -6,6 +6,8 @@ $info: #6e6864;
 $clr-lgrey: #f7f3f0;
 $clr-dgrey: #e1dad5;
 $clr-ddgrey: #bab2b5;
+$clr-lblue: rgb(251, 251, 255);
+//rgb(246, 249, 255)
 
 // FONTS
 
@@ -54,11 +56,12 @@ body {
 
 .section-header {
 	position: relative;
-	font-size: 3.25rem;
+	font-size: 2.5rem;
 	font-weight: 900;
 	font-family: 'Avenir';
 	color: $secondary;
 	z-index: 1;
+	margin-bottom: 2rem;
 
 	&::after {
 		content: '';
@@ -72,7 +75,7 @@ body {
 }
 
 .shadow {
-	box-shadow: 0px 1px 10px rgba(97, 95, 95, 0.736);
+	box-shadow: rem 0.5rem 2rem rgba(0, 0, 0, 0.25) !important;
 }
 
 //NAVBAR
@@ -108,11 +111,17 @@ body {
 
 #header {
 	position: relative;
-	background: url(../img/Portada-2.png);
-	background-position: center center;
-	background-size: cover;
-	height: 90vh;
-	max-height: 100vw;
+	width: 100%;
+	height: 700px;
+	overflow: hidden;
+
+	video {
+		object-fit: cover;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+	}
 	.container {
 		height: 100%;
 	}
@@ -146,8 +155,7 @@ body {
 
 // PERKS
 #perks {
-	//	background: linear-gradient(0deg, white 50%, $clr-lgrey 50%);
-	background: $clr-lgrey;
+	background: $clr-lblue;
 }
 
 .perks-box {
@@ -178,11 +186,12 @@ body {
 
 .nosotros-img-container {
 	position: relative;
-	width: 80%;
-	height: 600px;
+	width: 70%;
+	height: 500px;
 	overflow: hidden;
-	@media (max-width: 739px) {
+	@media (max-width: 768px) {
 		height: 500px;
+		box-shadow: none !important;
 	}
 }
 
@@ -191,18 +200,22 @@ body {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
-	@media (max-width: 739px) {
+	@media (max-width: 768px) {
 		display: none;
 	}
 }
 .nosotros-box {
 	position: absolute;
-	left: 70%;
-	top: 15%;
-	height: 70%;
-	width: 120%;
-	background: $clr-lgrey;
-	@media (max-width: 739px) {
+	left: 65%;
+	top: 17.5%;
+	height: 65%;
+	width: 100%;
+	padding: 2.5rem;
+	background: $clr-lblue;
+	@media (max-width: 992px) {
+		width: 130%;
+	}
+	@media (max-width: 768px) {
 		left: 5%;
 		width: 190%;
 		height: 100%;
@@ -221,54 +234,56 @@ body {
 .practica-container {
 	position: relative;
 	color: black;
-	flex-basis: 30%;
+	flex-basis: 27%;
 	min-width: 300px;
+
+	&:hover {
+		.practica-header {
+			background: $secondary;
+		}
+	}
 }
 
 .practica-img {
 	z-index: 1;
-	box-shadow: 0px 1px 10px rgba(97, 95, 95, 0.451);
+	box-shadow: 0px 1px 10px rgba(97, 95, 95, 0.889);
 }
 
 .practica-header {
+	text-align: center;
 	position: absolute;
-	bottom: 2rem;
-	left: 2rem;
-	font-size: 28px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: white;
+	padding: 0.5rem 1.5rem;
+	border-radius: 50px;
+	font-size: 20px;
 	font-style: none;
 	z-index: 3;
-	span {
-		background: $secondary;
-		padding: 0 5px;
-	}
+	transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .practica-number {
 	position: absolute;
 	color: $secondary;
-	top: -70px;
+	top: -60px;
 	left: 50px;
-	font-size: 6.5rem;
+	font-size: 5rem;
 	font-weight: 700;
 	z-index: 2;
-	text-shadow: 0 0px 6px rgba(97, 95, 95, 0.451);
-}
-
-@media (max-width: 739px) {
-	.section-header {
-		font-size: 3rem;
-	}
 }
 
 // TEAM
 
 #team {
-	background: $clr-lgrey;
+	background: $clr-lblue;
 }
 
 .team-container {
 	position: relative;
 	padding-bottom: 200px;
+	width: 350px;
 }
 
 .card-team {
@@ -283,10 +298,11 @@ body {
 .card .card-title {
 	padding-top: 10px;
 	padding-bottom: 5px;
-	font-size: 24px;
+	font-size: 20px;
 }
 .card-subtitle {
 	color: $secondary;
+	font-size: 18px;
 	padding-bottom: 10px;
 }
 
@@ -295,7 +311,7 @@ body {
 }
 
 .team-img {
-	filter: grayscale(100%);
+	//	filter: grayscale(100%);
 	box-shadow: 0 0 10px #6e6864;
 }
 
