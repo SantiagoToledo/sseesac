@@ -10703,31 +10703,37 @@ body {
 
 #header {
   position: relative;
-  width: 100%;
+  width: 80%;
+  margin: auto;
   height: 700px;
   overflow: hidden;
-}
-#header video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-}
-#header .container {
-  height: 100%;
+  background: url("../img/portada/p1.jpeg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
 }
 
 .header-text {
   color: white;
   font-family: "Avenir";
   font-size: clamp(2.5rem, 8vw, 10vh);
-  padding: 2vw 0vw;
+  padding: 1vw 2vw;
   letter-spacing: 0.2rem;
+  background: #104b7a;
+  mix-blend-mode: multiply;
+  position: relative;
 }
 .header-text span {
   line-height: 1;
   display: block;
+}
+.header-text::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #104b7a;
+  z-index: -1;
 }
 
 .header-title {
